@@ -1,0 +1,16 @@
+[Unit]
+Description=Gideon backend (FastAPI orchestrator)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/reign/ddrive/GenAI/Gideon/backend
+ExecStart=/home/reign/ddrive/GenAI/Gideon/env/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=2
+# The backend is lightweight; it does NOT load the model. llama-server is
+# started on demand from the Settings tab (or /api/server/start), so the GPU
+# stays free until you actually open Gideon and turn it on.
+
+[Install]
+WantedBy=default.target

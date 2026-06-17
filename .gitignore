@@ -1,0 +1,33 @@
+# --- Python virtualenv (recreate from backend/requirements.txt) ---
+env/
+venv/
+.venv/
+
+# --- Byte-compiled / caches ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Runtime artifacts ---
+backend/llama-server.log
+*.log
+/tmp/gideon-bench.log
+
+# --- Per-machine runtime config (written by the Settings tab; ship the example) ---
+backend/gideon_config.json
+
+# --- Local model files (multi-GB GGUFs live outside the repo) ---
+*.gguf
+models/
+
+# --- Third-party inference engine (clone separately, see README) ---
+llama-cpp-turboquant/
+
+# --- Editor / OS noise ---
+.vscode/
+.idea/
+*.swp
+.DS_Store

@@ -1,0 +1,14 @@
+# Gideon backend (FastAPI orchestrator) — Python 3.14
+# Install:  python -m venv env && env/bin/pip install -r backend/requirements.txt
+
+fastapi==0.136.3
+uvicorn==0.48.0
+pydantic==2.13.4
+
+# Document extraction
+PyMuPDF==1.27.2.3          # fitz — PDF text
+python-docx==1.2.0         # docx — Word text
+
+# Web-augmented research
+duckduckgo-search==8.1.1   # online_search; bundles `primp` (browser-impersonating client)
+lxml==6.1.1                # readable-text extraction for fetch_url
